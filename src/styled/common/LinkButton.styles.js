@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const ButtonElement = styled.button`
+export const LinkButtonElement = styled(Link)`
     padding: 8px 10px;
     border-radius: var(--radius);
     background-color: var(--primary-color);
@@ -32,5 +33,4 @@ export const ButtonElement = styled.button`
             background-color: var(--secondary-color);
         }
     `}
-
 `;
