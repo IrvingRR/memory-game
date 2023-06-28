@@ -6,14 +6,16 @@ export const GlobalStyles = createGlobalStyle`
     :root {
 
         /* Colors */
-        --background-primary-color: rgb(245, 245, 245);
-        --background-secondary-color: rgb(21, 27, 48);
-        --primary-color: rgb(255, 0, 236);
-        --primary-color-hover: rgb(180, 5, 168);
+        --background-primary-color: rgb(255, 255, 255);
+        --background-secondary-color: rgb(245, 245, 245);
+        --background-third-color: rgb(43, 218, 227);
+        --primary-color: rgb(138, 130, 216);
+        --primary-color-hover: rgb(107, 101, 165);
         --secondary-color: rgb(43, 218, 227);
         --secondary-color-hover: rgb(30, 143, 149);
         --third-color: rgb(237, 172, 42);
         --white-color: rgb(255, 255, 255);
+        --front-color: 
 
         /* Font */
         --font-color: rgb(51, 51, 51);
