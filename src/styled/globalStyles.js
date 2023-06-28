@@ -6,19 +6,21 @@ export const GlobalStyles = createGlobalStyle`
     :root {
 
         /* Colors */
-        --background-primary-color: rgb(255, 255, 255);
-        --background-secondary-color: rgb(245, 245, 245);
+        --background-primary-color: rgb(17, 21, 37);
+        --background-secondary-color: rgb(22, 28, 49);
         --background-third-color: rgb(43, 218, 227);
-        --primary-color: rgb(138, 130, 216);
-        --primary-color-hover: rgb(107, 101, 165);
-        --secondary-color: rgb(43, 218, 227);
-        --secondary-color-hover: rgb(30, 143, 149);
+
+        --primary-color: rgb(36, 227, 227);
+        --primary-color-hover: rgb(27, 172, 172);
+        
+        --secondary-color: rgb(202, 118, 244);
+        --secondary-color-hover: rgb(157, 92, 190);
+
         --third-color: rgb(237, 172, 42);
         --white-color: rgb(255, 255, 255);
-        --front-color: 
 
         /* Font */
-        --font-color: rgb(51, 51, 51);
+        --font-color: rgb(255, 255, 255);
         --font: 'Roboto', sans-serif;
 
         --fs-xs: 12px;
@@ -58,6 +60,11 @@ export const GlobalStyles = createGlobalStyle`
     a { 
         text-decoration: none;
         transition: var(--transition);
+    }
+
+    svg, path {
+        background: var(--font-color);
+        color: var(--white-color);
     }
 
     button {
