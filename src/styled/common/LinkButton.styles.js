@@ -6,7 +6,7 @@ export const LinkButtonElement = styled(Link)`
     border-radius: var(--radius);
     background-color: var(--primary-color);
     transition: var(--transition);
-    color: var(--font-color);
+    color: var(--white-color);
     letter-spacing: 0.5px;
     display: inline-flex;
     align-items: center;

@@ -6,16 +6,17 @@ export const GlobalStyles = createGlobalStyle`
     :root {
 
         /* Colors */
-        --background-primary-color: rgb(18, 21, 40);
+        --background-primary-color: rgb(245, 245, 245);
         --background-secondary-color: rgb(21, 27, 48);
         --primary-color: rgb(255, 0, 236);
         --primary-color-hover: rgb(180, 5, 168);
         --secondary-color: rgb(43, 218, 227);
         --secondary-color-hover: rgb(30, 143, 149);
         --third-color: rgb(237, 172, 42);
+        --white-color: rgb(255, 255, 255);
 
         /* Font */
-        --font-color: rgb(255, 255, 255);
+        --font-color: rgb(51, 51, 51);
         --font: 'Roboto', sans-serif;
 
         --fs-xs: 12px;
@@ -49,6 +50,7 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--font-color);
         font-family: var(--font);
         font-size: var(--fs-m);
+        min-height: 100vh;
     }
 
     a { 
@@ -60,6 +62,49 @@ export const GlobalStyles = createGlobalStyle`
         outline: none;
         border: 1px solid transparent;
         cursor: pointer;
+    }
+
+    /* Animations */
+    @keyframes slideInUp {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @keyframes slideInDown {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @keyframes bounce {
+        0%, 20%, 60%, 100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-10px);
+        }
+
+        80% {
+            transform: translateY(-5px);
+        }
     }
 
 `;

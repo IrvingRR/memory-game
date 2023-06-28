@@ -8,7 +8,7 @@ export const IconButtonElement = styled.button`
     justify-content: center;
     align-items: center;
     background-color: var(--primary-color);
-    color: var(--font-color);
+    color: var(--white-color);
 
     &:hover {
         background-color: var(--primary-color-hover);
