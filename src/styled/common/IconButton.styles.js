@@ -1,0 +1,38 @@
+import styled, { css } from 'styled-components';
+
+export const IconButtonElement = styled.button`
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+
+    &:active {
+        background-color: var(--primary-color);
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Secondary Variant */
+    ${ props => props.variant === 'secondary' && css`
+        background-color: var(--secondary-color);
+
+        &:hover {
+            background-color: var(--secondary-color-hover);
+        }
+
+        &:active {
+            background-color: var(--secondary-color);
+        }
+    ` }
+`;
