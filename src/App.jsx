@@ -1,3 +1,4 @@
+import { Router } from "./router/Router";
 import { GlobalStyles } from "./styled/globalStyles";
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
   return (
     <>
       <GlobalStyles/>
-      <h1>Memory Game</h1>
+      <Router/>
     </>
   )
 }
