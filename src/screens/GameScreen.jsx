@@ -1,13 +1,17 @@
 import { GameContainer, GameContent, GameTime } from "../styled/screens/GameScreen.styles";
-import { GameHeader, GameBoard } from "../components";
+import { GameHeader, GameBoard, GameTimer } from "../components";
+import { useState } from "react";
 
 export const GameScreen = () => {
+
+  const [isGameStarted, setIsGameStarted] = useState(false);
+
   return (
     <GameContainer>
         <GameHeader/>
         <GameContent>
             <GameTime>
-                <h2>30</h2>
+                <GameTimer isGameStarted={isGameStarted}/>
             </GameTime>
             <GameBoard/>
         </GameContent>
