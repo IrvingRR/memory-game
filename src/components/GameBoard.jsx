@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 import { GameBoardElement } from '../styled/components/GameBoard.styles';
 import { GameCard } from './GameCard';
 import MoonSvg from '../assets/moon.svg';
@@ -60,13 +61,15 @@ export const GameBoard = () => {
 
         const sound = new Audio(CorrectSound);
         sound.play();
-
+        toast.success('Nice!');
+        
         setCards(cardsMatched);
         setTimeout(() => resetChoices(), 1000);
         
       } else {
         const sound = new Audio(IncorrectSound);
         sound.play();
+        toast.error('Sorry, but this is not a match');
         
         setTimeout(() => resetChoices(), 1000);
       }
@@ -93,7 +96,6 @@ export const GameBoard = () => {
     checkMatch();
     checkAllMatches();
   }, [choiceOne, choiceTwo]);
-
 
   return (
     <GameBoardElement>
