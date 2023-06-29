@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import TickingSound from '../assets/ticking.mp3';
+import { useNavigate } from 'react-router-dom';
 
 export const GameTimer = ({ isGameStarted }) => {
 
     const [time, setTime] = useState(30);
     const audioRef = useRef();
     let timer;
+    const navigate = useNavigate();
 
     useEffect(() => {
         if(isGameStarted) {
@@ -17,6 +19,11 @@ export const GameTimer = ({ isGameStarted }) => {
     
             if(time <= 10) {
                 audioRef.current.play();
+            }
+            
+            if(time === 0) {
+                audioRef.current.pause();
+                navigate('/game-over');
             }
     
             return () => clearInterval(timer);

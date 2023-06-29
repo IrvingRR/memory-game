@@ -18,12 +18,13 @@ export const GameScreen = () => {
     <GameContainer>
         <GameModal activated={isModalActivated}>
           <h2>Are you ready?</h2>
+          <p>Find the 4 matches before the time end.</p>
           <ActionsModal>
             <Button onClick={handleStartGame}>Ready</Button>
             <LinkButton to='/' variant='secondary'>Cancel</LinkButton>
           </ActionsModal>
         </GameModal>
-        <GameHeader/>
+        <GameHeader isGameStarted={isGameStarted}/>
         <GameContent>
             <GameTime>
                 <GameTimer isGameStarted={isGameStarted}/>
