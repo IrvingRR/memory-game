@@ -1,15 +1,16 @@
+import { useState } from "react";
 import { GameContainer, GameContent, GameTime, ActionsModal } from "../styled/screens/GameScreen.styles";
 import { GameHeader, GameBoard, GameTimer, GameModal } from "../components";
 import { Button, LinkButton } from '../common';
-import { useState } from "react";
+import { useModal } from "../hooks";
 
 export const GameScreen = () => {
 
   const [isGameStarted, setIsGameStarted] = useState(false);
-  const [isModalActivated, setIsModalActivated] = useState(true);
+  const { isModalActivated, desactivateModal } = useModal(true);
 
   const handleStartGame = () => {
-    setIsModalActivated(false);
+    desactivateModal();
     setIsGameStarted(true);
   };
 
