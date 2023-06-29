@@ -30,5 +30,6 @@ export const ModalContainer = styled.div`
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+        animation: fadeIn 0.3s ease-in-out;
     ` }
 `;

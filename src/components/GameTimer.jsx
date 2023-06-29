@@ -3,7 +3,7 @@ import TickingSound from '../assets/ticking.mp3';
 
 export const GameTimer = ({ isGameStarted }) => {
 
-    const [time, setTime] = useState(15);
+    const [time, setTime] = useState(30);
     const audioRef = useRef();
     let timer;
 
