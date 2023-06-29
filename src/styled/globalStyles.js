@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         --background-primary-color: rgb(17, 21, 37);
         --background-secondary-color: rgb(22, 28, 49);
         --background-third-color: rgb(43, 218, 227);
+        --background-primary-color-gradient: rgba(17, 21, 37, 0.9);
 
         --primary-color: rgb(36, 227, 227);
         --primary-color-hover: rgb(27, 172, 172);

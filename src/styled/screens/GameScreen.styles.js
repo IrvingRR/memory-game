@@ -24,3 +24,9 @@ export const GameTime = styled.div`
         font-size: var(--fs-xxl);
     }
 `;
+
+export const ActionsModal = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+`;

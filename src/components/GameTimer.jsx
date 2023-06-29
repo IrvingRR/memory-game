@@ -26,7 +26,7 @@ export const GameTimer = ({ isGameStarted }) => {
     return (
         <div>
             <h2>{time}</h2>
-            <audio ref={audioRef} loop autoPlay>
+            <audio ref={audioRef} loop>
                 <source src={TickingSound} type="audio/mp3"/>
                 Your browser does not support the audio element.
             </audio>
