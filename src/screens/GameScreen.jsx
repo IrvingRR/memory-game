@@ -24,13 +24,17 @@ export const GameScreen = () => {
             <LinkButton to='/' variant='secondary'>Cancel</LinkButton>
           </ActionsModal>
         </GameModal>
-        <GameHeader isGameStarted={isGameStarted}/>
-        <GameContent>
-            <GameTime>
-                <GameTimer isGameStarted={isGameStarted}/>
-            </GameTime>
-            <GameBoard/>
-        </GameContent>
+        { isGameStarted && 
+          <>
+            <GameHeader isGameStarted={isGameStarted}/>
+            <GameContent>
+              <GameTime>
+                  <GameTimer isGameStarted={isGameStarted}/>
+              </GameTime>
+              <GameBoard/>
+          </GameContent>
+          </>
+        }
     </GameContainer>
   );
 };
