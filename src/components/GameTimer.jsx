@@ -23,7 +23,7 @@ export const GameTimer = ({ isGameStarted }) => {
             
             if(time === 0) {
                 audioRef.current.pause();
-                navigate('/game-over');
+                navigate('/game-over/unsolved');
             }
     
             return () => clearInterval(timer);

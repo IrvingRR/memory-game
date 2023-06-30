@@ -84,7 +84,7 @@ export const GameBoard = () => {
     const pendingMatches = cards.filter(card => !card.isMatched);
 
     if(pendingMatches.length === 0) {
-      navigate('/game-over');
+      navigate('/game-over/resolved');
     }
   };
   
