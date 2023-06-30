@@ -12,6 +12,10 @@ export const GameContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    p {
+        text-align: center;
+    }
 `;
 
 export const GameContent = styled.div`
