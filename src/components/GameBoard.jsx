@@ -61,7 +61,7 @@ export const GameBoard = () => {
 
         const sound = new Audio(CorrectSound);
         sound.play();
-        toast.success('Nice!');
+        toast.success('Nice!, it’s a match');
         
         setCards(cardsMatched);
         setTimeout(() => resetChoices(), 1000);
