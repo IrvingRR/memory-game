@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { GameHeaderElement, GameLogo } from "../styled/components/GameHeade.styles";
+import { GameHeaderElement, GameLogo } from "../styled/components/GameHeader.styles";
 import { IconButton } from "../common";
 import LogoSvg from "../assets/logo.svg";
 import SoundOnSvg from '../assets/sound--on.svg';
@@ -37,7 +37,7 @@ export const GameHeader = ({ isGameStarted }) => {
 
   return (
     <GameHeaderElement>
-        <GameLogo>
+        <GameLogo to='/'>
             <img src={LogoSvg} alt='logo'/>
             <h2>Memory Game</h2>
         </GameLogo>

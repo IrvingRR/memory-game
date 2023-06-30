@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const GameHeaderElement = styled.header`
     width: 100%;
@@ -8,7 +9,7 @@ export const GameHeaderElement = styled.header`
     padding: 20px;
 `;
 
-export const GameLogo = styled.div`
+export const GameLogo = styled(Link)`
     display: flex;
     align-items: center;
     gap: 10px;
