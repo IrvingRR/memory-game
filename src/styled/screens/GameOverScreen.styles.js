@@ -16,6 +16,10 @@ export const Container = styled.div`
     text-align: center;
     animation: fadeIn 0.3s ease-in-out;
 
+    a:hover {
+            animation: bounce 0.5s ease-in;
+    }
+
     h2 {
         font-size: var(--fs-xxl);
 
