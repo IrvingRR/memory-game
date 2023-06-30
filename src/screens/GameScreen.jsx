@@ -12,12 +12,17 @@ import { useModal } from "../hooks";
 export const GameScreen = () => {
 
   const [isGameStarted, setIsGameStarted] = useState(false);
+  const [isSoundMuted, setIsSoundMuted] = useState(false);
   const { isModalActivated, desactivateModal } = useModal(true);
 
   const handleStartGame = () => {
     desactivateModal();
     setIsGameStarted(true);
   };
+
+  const handleMuteAndUnmounteSound = () => {
+    setIsSoundMuted(!isSoundMuted);
+  }
 
   return (
     <GameContainer>
@@ -31,12 +36,12 @@ export const GameScreen = () => {
         </GameModal>
         { isGameStarted && 
           <>
-            <GameHeader isGameStarted={isGameStarted}/>
+            <GameHeader isGameStarted={isGameStarted} handleMuteAndUnmounteSound={handleMuteAndUnmounteSound} isSoundMuted={isSoundMuted}/>
             <GameContent>
               <GameTime>
-                  <GameTimer isGameStarted={isGameStarted}/>
+                  <GameTimer isGameStarted={isGameStarted} isSoundMuted={isSoundMuted}/>
               </GameTime>
-              <GameBoard/>
+              <GameBoard isSoundMuted={isSoundMuted}/>
           </GameContent>
           </>
         }

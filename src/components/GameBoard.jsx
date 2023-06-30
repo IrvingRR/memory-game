@@ -13,6 +13,8 @@ import IncorrectSound from '../assets/incorrect.mp3';
 /* 
     Component used to display the board of the game with every card
     this component does not receive any property
+
+    @param {Boolean} isSoundMuted: This param allows to play the sounds when the match is correct or not
 */
 
 const cardImages = [
@@ -22,7 +24,7 @@ const cardImages = [
   { src: CometSvg, isMatched: false },
 ];
 
-export const GameBoard = () => {
+export const GameBoard = ({ isSoundMuted }) => {
 
   const [cards, setCards] = useState([]);
   const [choiceOne, setChoiceOne] = useState(null);
@@ -69,7 +71,7 @@ export const GameBoard = () => {
         }); 
 
         const sound = new Audio(CorrectSound);
-        sound.play();
+        if(!isSoundMuted) sound.play();
         toast.success('Nice!, it’s a match');
         
         setCards(cardsMatched);
@@ -77,7 +79,7 @@ export const GameBoard = () => {
         
       } else {
         const sound = new Audio(IncorrectSound);
-        sound.play();
+        if(!isSoundMuted) sound.play();
         toast.error('Sorry, but this is not a match');
         
         setTimeout(() => resetChoices(), 1000);

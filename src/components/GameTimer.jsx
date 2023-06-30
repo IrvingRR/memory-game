@@ -6,9 +6,10 @@ import { useNavigate } from 'react-router-dom';
     This component allows to render the timer which end with the game if the time end
     
     @param {Boolean} isGameStarted: Is the value that indicates that the game has started
+    @param {Boolean} isSoundMuted: This value allows to play or pause the audio depending of the value
 */
 
-export const GameTimer = ({ isGameStarted }) => {
+export const GameTimer = ({ isGameStarted, isSoundMuted }) => {
 
     const [time, setTime] = useState(30);
     const audioRef = useRef();
@@ -25,7 +26,11 @@ export const GameTimer = ({ isGameStarted }) => {
             }, 1000);
     
             if(time <= 10) {
-                audioRef.current.play();
+                if(!isSoundMuted) {
+                    audioRef.current.play();
+                } else {
+                    audioRef.current.pause();
+                }
             }
             
             if(time === 0) {
