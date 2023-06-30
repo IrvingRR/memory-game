@@ -10,6 +10,7 @@ export const Container = styled.div`
     gap: 20px;
     padding: 20px;
     text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
 
     h2 {
         font-size: var(--fs-xxl);
