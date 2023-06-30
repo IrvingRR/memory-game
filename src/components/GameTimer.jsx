@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import TickingSound from '../assets/ticking.mp3';
 import { useNavigate } from 'react-router-dom';
+import TickingSound from '../assets/ticking.mp3';
 
 /* 
     This component allows to render the timer which end with the game if the time end
@@ -13,8 +13,8 @@ export const GameTimer = ({ isGameStarted, isSoundMuted }) => {
 
     const [time, setTime] = useState(30);
     const audioRef = useRef();
-    let timer;
     const navigate = useNavigate();
+    let timer;
 
     // This effect start to decrease the time and play the audio when the timer value is equal or less than 10
     useEffect(() => {

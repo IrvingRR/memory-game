@@ -30,6 +30,8 @@ export const GameBoard = ({ isSoundMuted }) => {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const navigate = useNavigate();
+  const correctSound = new Audio(CorrectSound);
+  const incorrectSound = new Audio(IncorrectSound);
 
   // This function is responsible for creating the random order of the cards
   const generateRandomOrder = () => {
@@ -70,16 +72,14 @@ export const GameBoard = ({ isSoundMuted }) => {
 
         }); 
 
-        const sound = new Audio(CorrectSound);
-        if(!isSoundMuted) sound.play();
+        if(!isSoundMuted) correctSound.play();
         toast.success('Nice!, it’s a match');
         
         setCards(cardsMatched);
         setTimeout(() => resetChoices(), 1000);
         
       } else {
-        const sound = new Audio(IncorrectSound);
-        if(!isSoundMuted) sound.play();
+        if(!isSoundMuted) incorrectSound.play();
         toast.error('Sorry, but this is not a match');
         
         setTimeout(() => resetChoices(), 1000);
