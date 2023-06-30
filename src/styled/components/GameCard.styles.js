@@ -14,11 +14,11 @@ export const GameCardElement = styled.div`
     cursor: pointer;
     transition: var(--transition);
     position: relative;
-    overflow: hidden;
+    transform-style: preserve-3d;
 
-    &:hover {
-        transform: translateY(-5px);
-    }
+    ${ props => props.flipped === 'true' && css`
+        transform: rotateY(180deg);
+    ` }
 
     img {
         width: 50px;
@@ -36,12 +36,9 @@ export const GameCardFront = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    ${ props => props.flipped === 'true' && css`
-        transform: rotateY(0deg);
-        transition-delay: 0.2s;
-        ` }
-        `;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    `;
 
 export const GameCardBack = styled.div`
     background-color: var(--primary-color-hover);
@@ -52,15 +49,12 @@ export const GameCardBack = styled.div`
     transition-delay: 0.2s;
     display: flex;
     justify-content: center;
+    border-radius: var(--radius);
     align-items: center;
     color: var(--third-color);
+    backface-visibility: hidden;
 
     h2 {
         font-size: 50px;
     }
-    
-    ${ props => props.flipped === 'true' && css`
-        transform: rotateY(90deg);
-        transition-delay: 0s;
-    ` }
 `;

@@ -11,11 +11,11 @@ import { GameCardElement, GameCardFront,GameCardBack } from "../styled/component
 export const GameCard = ({ card, flipped, handleChoiceCard }) => {
 
   return (
-    <GameCardElement>
-        <GameCardFront flipped={flipped.toString()}>
+    <GameCardElement flipped={flipped.toString()}>
+        <GameCardFront>
           <img src={card.src}/>
         </GameCardFront>
-        <GameCardBack onClick={() => handleChoiceCard(card)} flipped={flipped.toString()}>
+        <GameCardBack onClick={() => handleChoiceCard(card)}>
           <h2>?</h2>
         </GameCardBack>
     </GameCardElement>
