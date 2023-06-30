@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+/* 
+    This file content all styles specially for GameCard component using styled-components
+*/
+
 export const GameCardElement = styled.div`
     display: flex;
     height: 130px;

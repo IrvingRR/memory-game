@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+/* 
+    This file content all styles specially for GameBoard component using styled-components
+*/
+
 export const GameBoardElement = styled.div`
     width: 100%;
     max-width: 600px;

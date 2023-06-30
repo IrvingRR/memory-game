@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+/* 
+    This file content all styles specially for GameModal component using styled-components
+*/
+
 export const ModalContainer = styled.div`
     width: 100%;
     height: 100vh;

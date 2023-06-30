@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components';
 
+/* 
+    This file content all styles specially for IconButton element using styled-components
+*/
+
+
 export const IconButtonElement = styled.button`
     width: 30px;
     height: 30px;

@@ -1,5 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
+/* 
+    This file content all gloabl styles for all apllicatoin and every element, component and screen using styled-components and createGlobalStyle
+*/
+
+
 export const GlobalStyles = createGlobalStyle`
 
     /* Variables */

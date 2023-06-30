@@ -6,21 +6,30 @@ import SoundOnSvg from '../assets/sound--on.svg';
 import SoundOffSvg from '../assets/sound--off.svg';
 import BackgroundMusic from '../assets/background.mp3';
 
+/* 
+    This component allows to render the header of the game
+    
+    @param {Boolean} isGameStarted: Is the value that allows to indicate if the game already started
+*/
+
 export const GameHeader = ({ isGameStarted }) => {
 
   const [isMusicActivated, setIsMusicActivated] = useState(true);
   const audioRef = useRef();
 
+  // This function is responsible for pausing the music when the button in the top right corner is clicked and the music is playing
   const handleStopMusic = () => {
     audioRef.current.pause();
     setIsMusicActivated(false);
   };
 
+  // This function is responsible for playing the music when the button in the top right corner is clicked and the music is paused
   const handlePlayMusic = () => {
     audioRef.current.play();
     setIsMusicActivated(true);
   };
 
+  // This function is responsible for execute the correct function depending if the music is playing or paused
   const handleMusic = () => {
     if(isMusicActivated) {
       handleStopMusic();
@@ -29,6 +38,7 @@ export const GameHeader = ({ isGameStarted }) => {
     }
   }
 
+  // This effect is responsible for playing the background music when the game is started
   useEffect(() => {
     if(isGameStarted) {
       audioRef.current.play();

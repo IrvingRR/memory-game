@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
+/* 
+    This file content all styles specially for LinkButton element using styled-components and the Link component from react-router-dom
+*/
+
 export const LinkButtonElement = styled(Link)`
     padding: 8px 10px;
     border-radius: var(--radius);

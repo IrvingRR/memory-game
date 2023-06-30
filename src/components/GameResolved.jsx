@@ -1,3 +1,7 @@
+/* 
+    This component allows to render the content within of GameOverScreen if the user found all matches in the game.
+*/
+
 export const GameResolved = () => {
   return (
     <>

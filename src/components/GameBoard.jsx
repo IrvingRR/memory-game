@@ -10,6 +10,11 @@ import CometSvg from '../assets/comet.svg';
 import CorrectSound from '../assets/correct.mp3';
 import IncorrectSound from '../assets/incorrect.mp3';
 
+/* 
+    Component used to display the board of the game with every card
+    this component does not receive any property
+*/
+
 const cardImages = [
   { src: MoonSvg, isMatched: false },
   { src: StarSvg, isMatched: false },
@@ -24,6 +29,7 @@ export const GameBoard = () => {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const navigate = useNavigate();
 
+  // This function is responsible for creating the random order of the cards
   const generateRandomOrder = () => {
     const randomOrder = [...cardImages, ...cardImages]
     randomOrder.sort(() => Math.random() - 0.5);
@@ -32,6 +38,7 @@ export const GameBoard = () => {
     setCards(shuffleCards);
   };
 
+  // This function allow to modify the state choiceOne and choiceTwo when the user click a specific card
   const handleChoiceCard = (card) => {
 
     if(choiceOne && choiceTwo) return;
@@ -40,11 +47,13 @@ export const GameBoard = () => {
 
   };
 
+  // This function reset the previous value of the every choice
   const resetChoices = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
   };
 
+  // This function is responsible to check if the choiceOne and choiceTwo are equal and match
   const checkMatch = () => {
     if(choiceOne && choiceTwo) {
 
@@ -77,6 +86,7 @@ export const GameBoard = () => {
     }
   };
 
+  // This function is responsible to check if all matches were found
   const checkAllMatches = () => {
 
     if(cards.length === 0) return; 
@@ -88,10 +98,12 @@ export const GameBoard = () => {
     }
   };
   
+  // This effect execute thi generateRandomOrder function to create a new order when the component is rendered the first time
   useEffect(() => {
     generateRandomOrder();
   }, []);
 
+  // This effect is responsible to check if the choices are match and if the all matches were found every time the choiceOne and choiceTwo changed
   useEffect(() => {
     checkMatch();
     checkAllMatches();

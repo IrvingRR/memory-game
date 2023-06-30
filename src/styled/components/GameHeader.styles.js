@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+/* 
+    This file content all styles specially for GameHeader component using styled-components
+*/
+
 export const GameHeaderElement = styled.header`
     width: 100%;
     display: flex;

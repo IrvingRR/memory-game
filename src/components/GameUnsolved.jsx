@@ -1,3 +1,7 @@
+/* 
+    This component allows to render the content within of GameOverScreen if the user can't found all matches in the game before the time end.
+*/
+
 export const GameUnsolved = () => {
     return (
       <>

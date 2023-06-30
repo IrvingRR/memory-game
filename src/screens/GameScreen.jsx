@@ -4,6 +4,11 @@ import { GameHeader, GameBoard, GameTimer, GameModal } from "../components";
 import { Button, LinkButton } from '../common';
 import { useModal } from "../hooks";
 
+/* 
+    This Screen allows to render all content when the user access to route with the path "/game"
+    This screen render the game
+*/
+
 export const GameScreen = () => {
 
   const [isGameStarted, setIsGameStarted] = useState(false);

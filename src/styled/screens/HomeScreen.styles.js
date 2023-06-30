@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+/* 
+    This file content all styles specially for HomeScreen screen using styled-components
+*/
+
+
 export const Container = styled.div`
     width: 100%;
     height: 100vh;

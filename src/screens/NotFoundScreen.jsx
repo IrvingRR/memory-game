@@ -1,6 +1,11 @@
 import {  Container } from '../styled/screens/NotFoundScreen.styles';
 import { LinkButton } from '../common';
 
+/* 
+    This Screen allows to render the not found screen when the user access to route which does nott exists
+    This screen render the not found screen
+*/
+
 export const NotFoundScreen = () => {
   return (
     <Container>
